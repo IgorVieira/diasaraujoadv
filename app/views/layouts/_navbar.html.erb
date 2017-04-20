@@ -1,21 +1,21 @@
-<nav class="navbar">
-      <li class="logo">
-        Home
-      </li>
-    <ul>
-      <li>Link</li>
-      <li>Link</li>
-      <li>Link</li>
-      <li>Link</li>
-      <li>Link</li>
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="page-scroll brand-logo"><%= image_tag "logo.png" %></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Curriculo</a></li>
+        <li><%= link_to "Artigos", posts_path %></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
 
-    </ul>
-   <div class="handle">
-       <div id="nav-icon3">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-   </div>
-</nav>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Curriculo</a></li>
+        <li><a href="#">Artigos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>

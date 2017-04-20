@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize";
+@import "materialize/extras/nouislider";
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body{
+    font-family: 'Lora', serif;
+}
+nav{
+
+    & ul a{
+        color:#000
+    }
+    
+}
+.brand-logo img{
+    height: 90px;
+    width: 80px;
+    margin-top: -13px;
+}
+
+.right a{
+    left:50px;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #6d4c41;
+}
+
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+.button-collapse {
+    color: #26a69a;
+}
+
+.section{
+    padding: 3em;
+}
+
+
+.pagination:before,
+ .pagination:after{
+ 	content: " ";
+ 	display: table;
+ }
+
+ .pagination:after{
+ 	clear:both;
+ }
+
+ .pagination{
+ 	text-align:center;
+ 	margin: 0 0 3em 0;
+ 	a, .previous_page, .current, .next_page{
+ 		padding: .75em 1em;
+ 		margin: 0 .5em;
+ 		border-radius: .15em;
+ 		line-height: 20px;
+     cursor: pointer;
+ 		text-decoration: none;
+ 		background: #ccc;
+ 		font-weight: 700;
+ 		font-size: .7em;
+ 		font-style: normal;
+ 		color:#000;
+ 		&:hover{
+ 			background: #ccc;
+ 			color:#6d4c41;
+ 		}
+
+ 	}
+ }
+
+ .col.s12.m4.card.board-post{
+     left:20px;
+ }
+
+@media only screen and (max-width : 616px) {
+    .col.s12.m4.card.board-post{
+         left:0;
+    }
+}
+
+a{
+    color:#333;
+}

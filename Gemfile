@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 
-ruby '2.3.1'
 
 gem 'rails', '~> 5.0.1'
 gem 'puma', '~> 3.0'
@@ -21,7 +20,8 @@ gem 'paperclip'
 gem 'mini_magick'
 gem 'friendly_id', '~> 5.1'
 gem 'devise', '~> 4.2'
-
+gem 'materialize-sass'
+gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 
 
 group :development, :test do

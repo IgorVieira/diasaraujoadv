@@ -20,8 +20,13 @@
 body{
     font-family: 'Lora', serif;
 }
-nav{
 
+nav{
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #ffffff;
     & ul a{
         color:#000
     }
@@ -112,4 +117,31 @@ hr.style-eight:after {
 
 a{
     color:#333;
+}
+
+.topo {
+  cursor: pointer;
+  position: fixed;
+  bottom: 3.5em;
+  right: 3.5em;
+  display: none;
+  z-index: 50;
+  background-color: #c26262;
+  border-color: #fff;
+  border-witdh: 2px;
+  border-witdh: medium;
+  border-style: solid;
+  border-radius: 3px;
+  color: #fff;
+  padding: 1em 2rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+@media only screen and (max-width : 600px) {
+  .topo{
+      margin-right: -2.5em;
+  }
 }

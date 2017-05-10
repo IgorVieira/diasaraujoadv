@@ -2,6 +2,8 @@ class ServicesController < ApplicationController
 
     def index
         @services = Service.all.order("created_at  DESC")
+
+        @other_services  =  Service.all.order("created_at ASC")
     end
 
     def new

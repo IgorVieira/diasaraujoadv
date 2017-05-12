@@ -1,8 +1,15 @@
+<div class="container">
 <h1><%= @service.title%></h1>
+<hr>
 <div><%= @service.body.html_safe%></div>
 
 
+<br>
 <% if user_signed_in? %>
   <%= link_to "Edit service", edit_service_path(@service) %>
   <%= link_to "Delete service", service_path(@service), method: :delete, data:{confirm: "Are you sure?"} %>
 <% end %>
+<br>
+</div>
+
+

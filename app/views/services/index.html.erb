@@ -7,7 +7,7 @@
         <% @services.each do |service| %>
             <div class="card-content">
                 <h3 class="gray-text"><%=service.title%></h3>
-                <p class="gray-text"><%= truncate(raw(service.body), :length => 150) %></p>
+                <p class="gray-text"><%= truncate(service.body, :length => 500 , :escape => false) %></p>
             </div>
             <div class="card-action">
                 <p class="date"><%= service.created_at.strftime("%b %d, %Y")%></p>

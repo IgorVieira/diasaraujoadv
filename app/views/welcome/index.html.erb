@@ -41,23 +41,19 @@
         
 
          <% @services.each do |service| %>
-              <div class="col s12 m6">
-                <h2 class="header"><% service.title %></h2>
-                <div class="card horizontal">
-                  <div class="card-image">
-                    <img src="http://lorempixel.com/100/190/nature/6">
-                  </div>
-                  <div class="card-stacked">
-                    <div class="card-content">
-                     <p class="gray-text"><%= truncate(service.body, :length => 500 , :escape => false) %></p>
-                    </div>
-                    <div class="card-action">
-                      <%= link_to service.title, service%>
-                    </div>
-                  </div>
-                </div>
-              </div>    
-         <% end %>
+          <div class="col s12 m4">
+              <div class="card  darken-1 z-depth-4">
+              <div class="card-content black-text">
+                  <span class="card-title "><%= service.title%></span>
+                  <hr>
+                  <p><%= truncate(service.body, :length => 500 , :escape => false) %></p>
+              </div>
+              <div class="card-action">
+                  <%= link_to "Mais...", service, class:"black-text" %>
+              </div>
+              </div>
+          </div>
+          <% end %>
 
 
 

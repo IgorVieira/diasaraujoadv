@@ -1,22 +1,26 @@
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
     <h3 class="header center grey-text">Nossos serviços para lhe atender</h3>
+    <hr>    
   </div>
   <br><br>
 </div>
 <div class="container">
 
     <div class="row">
+    <% @services.each do |service| %>
     <div class="col s12 m4">
-        <div class="card blue-grey darken-1 z-depth-4">
-        <div class="card-content white-text">
-            <span class="card-title">Plástica Facial</span>
-            <p>Face-Lifting, Blefaroplastias, Rinoplastias, Orelha de Abano, Preenchimento, Botox..</p>
+        <div class="card  darken-1 z-depth-4">
+        <div class="card-content black-text">
+            <span class="card-title "><%= service.title%></span>
+            <hr>
+            <p><%= truncate(service.body, :length => 500 , :escape => false) %></p>
         </div>
         <div class="card-action">
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Mais...</a>
+             <%= link_to "Mais...", service, class:"btn" %>
         </div>
         </div>
     </div>
+    <% end %>
 </div>          
 </div>

@@ -15,11 +15,7 @@
  */
 @import "materialize";
 @import "materialize/extras/nouislider";
-@import url('https://fonts.googleapis.com/css?family=Lora');
 
-body{
-    font-family: 'Lora', serif;
-}
 
 nav{
     top: 0;
@@ -27,15 +23,23 @@ nav{
     right: 0;
     width: 100%;
     background-color: #ffffff;
+    text-transform: uppercase;
     & ul a{
         color:#000
     }
     
 }
-.brand-logo img{
-    height: 90px;
-    width: 80px;
-    margin-top: -13px;
+
+.title-logo{
+        font-weight: 700;
+        width: 190px;
+        height: 70px;
+		font-size: .8em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		border: 2px solid #000;
+		text-decoration: none;
+        padding: 10px;
 }
 
 .right a{
@@ -43,7 +47,7 @@ nav{
 }
 
 .slider .indicators .indicator-item.active {
-    background-color: #6d4c41;
+    background-color: #616161;
 }
 
 hr.style-eight {
@@ -126,7 +130,7 @@ a{
   right: 3.5em;
   display: none;
   z-index: 50;
-  background-color: #c26262;
+  background-color: #757575;
   border-color: #fff;
   border-witdh: 2px;
   border-witdh: medium;

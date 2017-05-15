@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  def new
+  	def new
 		@contact = Contact.new
 	end
 
@@ -11,6 +11,6 @@ class ContactsController < ApplicationController
 		else
 			flash.now[:error] = 'Não foi possivel enviar a mensagem'
 			render :new
- 		end
+		end
 	end
 end

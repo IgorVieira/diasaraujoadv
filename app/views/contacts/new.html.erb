@@ -5,38 +5,26 @@
   <div class="row">
   
 <div class="col s12 m6 card">
-<%= form_for @contact do |f|  %>
+  <%= form_for @contact do |f| %>
+      <%= f.label :Nome%>
+      <%= f.text_field :name, required:true%>
 
- <div class="input-field col s12 m6">
-   <%= f.label :name,'Nome'%>
-   <%= f.text_field :name, required:true, class:'validate'%>
- </div>
+      <br>
 
+      <%= f.label :Email%><br>
+      <%= f.email_field :email, required:true%>
 
- <div class="input-field col s12 m6">
-   <%= f.label :email, 'Email'%>
-   <%= f.email_field :email, required:true, class:'validate'%>
- </div>
+      <br>
 
- <div class="row">
-   <div class="input-field col s12 m12">
-     <%= f.label :subject_contact, 'Assunto'%>
-     <%= f.text_field :subject_contact, required:true, class:'validate'%>
-   </div>
- </div>
+      <%= f.label :Mensagem%><br>
+      <%= f.text_area :message, as: :text%><br>
 
- <div class="row">
-   <div class="input-field col s12 m12">
-     <%= f.label :message, 'Mensagem'%><br>
-     <%= f.text_area :message, class:'materialize-textarea'%><br>
-   </div>
- </div>
-
-
- <div class="row center">
-       <%= f.submit 'Enviar', class: 'waves-effect waves-light grey btn' %><br>
- </div>
- <% end %>
+      <div class="hidden">
+        <%= f.label :nickname%><br>
+        <%= f.text_area :nickname, hint: 'leave this field blank'%><br>
+      </div>
+      <%= f.submit 'Enviar', class: 'waves-effect waves-light btn brown lighten-1'%><br>
+    <% end %>
 </div>
 
    <div class="col s12 m6 down-position">

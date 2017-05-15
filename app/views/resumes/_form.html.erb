@@ -1,0 +1,11 @@
+    <%= form_for @resume do |f| %>
+        <%= f.label :title, 'Título'%><br>
+        <%= f.text_field :title%> <br>
+        <br>
+        <%= f.cktext_area :body, rows: 10 %>
+        <br>
+         <%= f.submit "Publicar", class: "btn" %>
+        
+    <% end %>
+    <br>
+</div>

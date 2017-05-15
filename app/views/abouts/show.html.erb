@@ -1,0 +1,8 @@
+<h1><%= @about.title%></h1>
+<div><%= @about.body.html_safe%></div>
+
+
+<% if user_signed_in? %>
+  <%= link_to "Edit about", edit_about_path(@about) %>
+  <%= link_to "Delete about", about_path(@about), method: :delete, data:{confirm: "Are you sure?"} %>
+<% end %>

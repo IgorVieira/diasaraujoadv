@@ -1,0 +1,8 @@
+<h1><%= @resume.title%></h1>
+<div><%= @resume.body.html_safe%></div>
+
+
+<% if user_signed_in? %>
+  <%= link_to "Edit resume", edit_resume_path(@resume) %>
+  <%= link_to "Delete resume", resume_path(@resume), method: :delete, data:{confirm: "Are you sure?"} %>
+<% end %>

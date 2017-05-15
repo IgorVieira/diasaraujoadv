@@ -2,17 +2,17 @@
     <div class="nav-wrapper container">
       <a href="/" class="page-scroll black-text title-logo">Dias & Araújo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Sobre</a></li>
+        <li><%= link_to "Sobre", abouts_path %></li>
         <li><%= link_to "Serviços", services_path %></li>
-        <li><a href="#">Curriculo</a></li>
+        <li><%= link_to "Curriculo", resumes_path %></li>
         <li><%= link_to "Artigos", articles_path %></li>
         <li><%= link_to "Contato",    new_contact_path, class:'black-text'%></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Curriculo</a></li>
+        <li><%= link_to "Sobre", abouts_path %></li>
+        <li><%= link_to "Serviços", services_path %></li>
+        <li><%= link_to "Curriculo", resumes_path %></li>
         <li><%= link_to "Artigos", articles_path %></li>
         <li><%= link_to "Contato",    new_contact_path, class:'black-text'%></li>
       </ul>

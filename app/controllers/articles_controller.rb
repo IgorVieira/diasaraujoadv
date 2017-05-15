@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
       @other_articles = Article.all.order("created_at ASC")
 
-end
+  end
   
 
   def new

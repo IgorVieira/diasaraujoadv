@@ -1,4 +1,6 @@
 class ResumesController < ApplicationController
+    before_action :find_resume, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except:[:index, :show]
 
     def index
         @resumes = Resume.all.order("created_at DESC").paginate(page:params[:page], per_page: 3)

@@ -4,29 +4,29 @@
    
 
     <div class="col s12 m7 card">
-        <% @posts.each do |post| %>
+        <% @articles.each do |article| %>
             <div class="card-content">
-                <h3 class="gray-text"><%=post.title%></h3>
-                <p class="gray-text"><%= truncate(raw(post.body), :length => 140) %></p>
+                <h3 class="gray-text"><%=article.title%></h3>
+                <p class="gray-text"><%= truncate(raw(article.body), :length => 140) %></p>
             </div>
             <div class="card-action">
-                <p class="date"><%= post.created_at.strftime("%b %d, %Y")%></p>
+                <p class="date"><%= article.created_at.strftime("%b %d, %Y")%></p>
 
-                <%= link_to "Mais", post, class:"waves-effect waves-light brown  btn"%>
+                <%= link_to "Mais", article, class:"waves-effect waves-light brown  btn"%>
             </div>
         <% end %>
 
-        <%= will_paginate @posts %>
+        <%= will_paginate @articles %>
     </div>
 
 
-   <div class="col s12 m4 card board-post">
+   <div class="col s12 m4 card board-article">
      <div class="card brown">
         <div class="card-content">
             <h4 class="center white-text">Outros artigos</h4>
         </div>
      </div>
-        <% @other_posts.each do |o| %>
+        <% @other_articles.each do |o| %>
             <ul>
                 <i class="fa fa-bookmark-o" aria-hidden="true"></i>  <%= link_to o.title, o %>
             </ul>

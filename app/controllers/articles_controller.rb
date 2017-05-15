@@ -4,8 +4,11 @@ class ArticlesController < ApplicationController
 
 
   def index
-      @articles = Article.all.order("creted_at DESC").paginate(page:params[:page], per_page: 3)
-  end
+      @articles = Article.all.order("created_at DESC").paginate(page:params[:page], per_page: 3)
+
+      @other_articles = Article.all.order("created_at ASC")
+
+end
   
 
   def new

@@ -46,7 +46,7 @@
               <div class="card-content black-text">
                   <span class="card-title "><%= service.title%></span>
                   <hr>
-                  <p><%= truncate(service.body, :length => 500 , :escape => false) %></p>
+                  <p><%= truncate(service.body, :length => 300 , :escape => false) %></p>
               </div>
               <div class="card-action">
                   <%= link_to "Mais...", service, class:"black-text" %>

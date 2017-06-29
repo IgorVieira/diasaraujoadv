@@ -17,7 +17,9 @@
 @import "materialize/extras/nouislider";
 
 
-
+.card-content{
+    height: 350px;
+}
 nav{
     top: 0;
     left: 0;
@@ -32,15 +34,15 @@ nav{
 }
 
 .title-logo{
-        font-weight: 700;
-        width: 190px;
-        height: 70px;
-		font-size: .8em;
-		letter-spacing: 4px;
-		text-transform: uppercase;
-		border: 2px solid #000;
-		text-decoration: none;
-        padding: 10px;
+    font-weight: 700;
+    width: 190px;
+    height: 70px;
+    font-size: .8em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    text-decoration: none;
+    padding: 10px;
 }
 
 .right a{
@@ -78,41 +80,41 @@ hr.style-eight {
 
 
 .pagination:before,
- .pagination:after{
- 	content: " ";
- 	display: table;
+    .pagination:after{
+        content: " ";
+        display: table;
+    }
+
+    .pagination:after{
+ 	    clear:both;
+    }
+
+    .pagination{
+        text-align:center;
+        margin: 0 0 3em 0;
+        a, .previous_page, .current, .next_page{
+            padding: .75em 1em;
+            margin: 0 .5em;
+            border-radius: .15em;
+            line-height: 20px;
+        cursor: pointer;
+            text-decoration: none;
+            background: #ccc;
+            font-weight: 700;
+            font-size: .7em;
+            font-style: normal;
+            color:#000;
+            &:hover{
+                background: #ccc;
+                color:#6d4c41;
+            }
+
+        }
  }
 
- .pagination:after{
- 	clear:both;
- }
-
- .pagination{
- 	text-align:center;
- 	margin: 0 0 3em 0;
- 	a, .previous_page, .current, .next_page{
- 		padding: .75em 1em;
- 		margin: 0 .5em;
- 		border-radius: .15em;
- 		line-height: 20px;
-     cursor: pointer;
- 		text-decoration: none;
- 		background: #ccc;
- 		font-weight: 700;
- 		font-size: .7em;
- 		font-style: normal;
- 		color:#000;
- 		&:hover{
- 			background: #ccc;
- 			color:#6d4c41;
- 		}
-
- 	}
- }
-
- .col.s12.m4.card.board-article{
+.col.s12.m4.card.board-article{
      left:20px;
- }
+}
 
 @media only screen and (max-width : 616px) {
     .col.s12.m4.card.board-article{
@@ -133,8 +135,6 @@ a{
   z-index: 50;
   background-color: #757575;
   border-color: #fff;
-  border-witdh: 2px;
-  border-witdh: medium;
   border-style: solid;
   border-radius: 3px;
   color: #fff;
@@ -148,5 +148,8 @@ a{
 @media only screen and (max-width : 600px) {
   .topo{
       margin-right: -2.5em;
+  }
+  a .page-scroll .black-text .title-logo{
+      margin-left: 2.5em;
   }
 }

@@ -1,19 +1,18 @@
 <div class="section">
 <div class="row">
         <div class="col s12 m7 card">
-            <% @resumes.each do |resume| %>
+            <% @abouts.each do |about| %>
                 <div class="card-content">
-                    <h3 class="gray-text"><%=resume.title%></h3>
-                    <p class="gray-text"><%= truncate(raw(resume.body), :length => 140) %></p>
+                    <h3 class="gray-text"><%=about.title%></h3>
+                    <p class="gray-text"><%= truncate(raw(about.body), :length => 140) %></p>
                 </div>
                 <div class="card-action">
-                    <p class="date"><%= resume.created_at.strftime("%b %d, %Y")%></p>
+                    <p class="date"><%= about.created_at.strftime("%b %d, %Y")%></p>
 
-                    <%= link_to "Mais", resume, class:"waves-effect waves-light brown  btn"%>
+                    <%= link_to "Mais", about, class:"waves-effect waves-light brown  btn"%>
                 </div>
             <% end %>
 
-            <%= will_paginate @resumes %>
             </div>
         <div>
 

@@ -1,9 +1,17 @@
-<%= image_tag @resume.avatar.url(:thumb) %>
-<h1><%= @resume.title%></h1>
-<div><%= @resume.body.html_safe%></div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <%= image_tag @resume.avatar.url(:thumb), class:' circle responsive-image' %>
+      <h4><%= @resume.title%></h4>
+      <hr>
+      <div><%= @resume.body.html_safe%></div>
+      <hr>
 
+      <% if user_signed_in? %>
+        <%= link_to "Edit resume", edit_resume_path(@resume) %>
+        <%= link_to "Delete resume", resume_path(@resume), method: :delete, data:{confirm: "Are you sure?"} %>
+      <% end %>
 
-<% if user_signed_in? %>
-  <%= link_to "Edit resume", edit_resume_path(@resume) %>
-  <%= link_to "Delete resume", resume_path(@resume), method: :delete, data:{confirm: "Are you sure?"} %>
-<% end %>
+    </div>
+  </div>
+</div>

@@ -6,7 +6,7 @@
 
 <br>
 <% if user_signed_in? %>
-  <%= link_to "Edit service", edit_service_path(@service) %>
+  <%= link_to "Edit service", edit_service_path(@service) %> |
   <%= link_to "Delete service", service_path(@service), method: :delete, data:{confirm: "Are you sure?"} %>
 <% end %>
 <br>

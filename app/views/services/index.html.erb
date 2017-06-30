@@ -8,19 +8,19 @@
 <div class="container">
 
     <div class="row">
-    <% @services.each do |service| %>
-    <div class="col s12 m4">
-        <div class="card  darken-1 z-depth-4">
-        <div class="card-content black-text">
-            <span class="card-title "><%= service.title%></span>
-            <hr>
-            <p><%= truncate(service.body, :length => 500 , :escape => false) %></p>
-        </div>
-        <div class="card-action">
-             <%= link_to "Mais...", service, class:"btn" %>
-        </div>
-        </div>
-    </div>
-    <% end %>
-</div>          
+        <% @services.each do |service| %>
+          <div class="col s12 m4">
+              <div class="card  darken-1 z-depth-4">
+              <div class="card-content black-text">
+                  <span class="card-title "><%= service.title%></span>
+                  <hr>
+                  <p><%= truncate(service.body, :length => 300 , :escape => false) %></p>
+              </div>
+              <div class="card-action">
+                  <%= link_to "Mais...", service, class:"black-text" %>
+              </div>
+              </div>
+          </div>
+        <% end %>
+    </div>         
 </div>

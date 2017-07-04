@@ -1,22 +1,22 @@
 <div class="section">
 <div class="row">
-        <div class="col s12 m7 card">
-            <% @abouts.each do |about| %>
-                <div class="card-content">
-                    <h3 class="gray-text"><%=about.title%></h3>
-                    <p class="gray-text"><%= truncate(raw(about.body), :length => 140) %></p>
-                </div>
-                <div class="card-action">
-                    <p class="date"><%= about.created_at.strftime("%b %d, %Y")%></p>
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
 
-                    <%= link_to "Mais", about, class:"waves-effect waves-light brown  btn"%>
-                </div>
-            <% end %>
-
-            </div>
+            <h3 class="header center grey-text">Sobre</h3>
+            <hr>
+            <p>
+            Com o senso de demonstrar as suas capacidades e fazendo jus às mesmas o
+            escritório Dias & Araújo desde o começo foi criado em prol de ser o melhor
+            em suas áreas de atuação, com advogadas competentes e dedicadas, 
+            o que as levou a um crescimento rápido, demonstrando a capacidade das mesmas
+            em meio ao seu trabalho, por isso que Dias & Araújo é um escritório bem conceituado,
+            e assim mostrando que comprometimento e seriedade, são a base de um bom relacionamento
+            e atuação profissional.
+            </p>
+            <hr>
         <div>
 
     </div>
-
+    </div>
 </div>
 </div>

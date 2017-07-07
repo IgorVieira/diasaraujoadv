@@ -6,7 +6,7 @@
     <div class="col s12 m7 card">
         <% @articles.each do |article| %>
             <div class="card-content">
-                <h3 class="gray-text"><%=article.title%></h3>
+                <h4 class="gray-text"><%=article.title%></h4>
                 <p class="gray-text"><%= truncate(article.body, :length => 300 , :escape => false) %></p>
             </div>
             <div class="card-action">

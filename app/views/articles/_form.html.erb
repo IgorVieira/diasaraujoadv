@@ -8,9 +8,14 @@
         <%= f.text_field :title%> <br>
         <br>
         <%= f.cktext_area :body, rows: 10 %>
+        <br>    
+        <%= f.label :name_author, 'Autor:'%><br>
+        <%= f.text_field :name_author%> <br>
         <br>
-         <%= f.submit "Publicar", class: "btn" %>
-        
+        <%= f.label :description_author, 'Sobre o Autor:'%><br>
+        <%= f.cktext_area :description_author%> <br>
+        <br>
+        <%= f.submit "Publicar", class: "btn" %>
     <% end %>
     <br>
 </div>

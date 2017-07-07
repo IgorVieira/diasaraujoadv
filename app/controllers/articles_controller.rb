@@ -17,15 +17,16 @@ class ArticlesController < ApplicationController
 
 
   def create
-      @article = Article.new(article_params)
-      if @article.save
-        redirect_to @article
-      else
-        render 'new'
-      end
+    @article = Article.new(article_params)
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
   end
 
   def show
+    @other_articles = Article.all.order("created_at ASC")
   end
 
   def edit
@@ -33,16 +34,16 @@ class ArticlesController < ApplicationController
 
 
   def update
-      if @article.update(article_params)
-        redirect_to @article
-      else
-        render 'edit'
-      end
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-      @article.destroy
-      redirect_to root_path
+    @article.destroy
+    redirect_to root_path
   end
 
   private
@@ -52,7 +53,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-      params.require(:article).permit(:title, :body, :slug, :avatar)
+    params.require(:article).permit(:title, :body, :slug,:name_author, :description_author, :avatar)
   end
 
 end

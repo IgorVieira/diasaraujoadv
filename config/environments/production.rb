@@ -84,7 +84,7 @@ Rails.application.configure do
 
   # SendGrid
 
-  config.action_mailer.default_url_options = { host: 'diasandaraujo.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'araujoadv.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {

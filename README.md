@@ -1,2 +1,2 @@
-# Dias e Araújo Advocacia
+# Araújo Advocacia
 
